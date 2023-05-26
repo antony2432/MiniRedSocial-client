@@ -5,7 +5,7 @@ interface SistemState {
 }
 
 const initialState: SistemState = {
-  darkMode: true,
+  darkMode: false,
 };
 
 export const sistemSlice = createSlice({

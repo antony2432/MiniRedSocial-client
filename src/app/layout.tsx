@@ -1,10 +1,8 @@
 'use client';
 import React from 'react';
 import ProviderRedux from '@/redux/Provider';
-import { Inter } from 'next/font/google';
+import RealLayout from './RealLayout';
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Create Next App',
@@ -18,9 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <ProviderRedux>
-      <html lang="en" className="dark">
-        <body className={inter.className}>{children}</body>
-      </html>
+      <RealLayout>{children}</RealLayout>
     </ProviderRedux>
   );
 }
