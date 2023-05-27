@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Inder } from 'next/font/google';
+import { inder } from '../resours';
 import {
   BsSearch,
   BsFillHouseFill,
@@ -13,8 +13,6 @@ import { BsChevronRight } from 'react-icons/bs';
 import { useRouter } from 'next/navigation';
 import SwitchDarkMode from './SwitchDarkMode';
 import Image from 'next/image';
-
-const inder = Inder({ weight: '400', subsets: ['latin'] });
 
 function MobileMenuNav() {
   const router = useRouter();
@@ -59,7 +57,7 @@ function MobileMenuNav() {
         >
           <section className="flex items-center gap-2 text-xl dark:text-white">
             <BsBoxArrowInRight />
-            <span>Perfil</span>
+            <span>Salir</span>
           </section>
           <BsChevronRight className="dark:text-white" />
         </section>
@@ -72,7 +70,7 @@ function MenuNav() {
   const router = useRouter();
 
   return (
-    <div className="hidden absolute w-80 right-5 sm:top-[12vh] md:top-[8vh] py-2 bg-white rounded-b-lg dark:bg-[#3E4342] duration-300 sm:flex flex-col items-center px-4 shadow-lg border">
+    <div className="hidden absolute w-80 right-5 sm:top-[12vh] md:top-[6.5vh] py-2 bg-white rounded-b-lg dark:bg-[#3E4342] duration-300 sm:flex flex-col items-center px-4 shadow-lg border">
       <section className="w-full flex flex-col justify-center items-center mt-4 px-4 gap-1">
         <SwitchDarkMode />
         <section
@@ -101,7 +99,7 @@ function MenuNav() {
         >
           <section className="flex items-center gap-2 text-xl dark:text-white">
             <BsBoxArrowInRight />
-            <span>Perfil</span>
+            <span>Salir</span>
           </section>
           <BsChevronRight className="dark:text-white" />
         </section>
@@ -143,11 +141,11 @@ export default function NavbarLogeado() {
       {mobileMenu ? <MobileMenuNav /> : null}
       <section className="hidden sm:flex justify-between items-center gap-5 mr-5">
         <BsFillHouseFill
-          className="text-5xl text-teal-500 my-4 dark:text-white duration-300"
+          className="text-4xl text-teal-500 my-4 dark:text-white duration-300"
           onClick={() => router.push('/home')}
         />
         <BsChatSquareDotsFill
-          className="text-5xl text-teal-500 my-4 dark:text-white duration-300"
+          className="text-4xl text-teal-500 my-4 dark:text-white duration-300"
           onClick={() => router.push('/chat')}
         />
         <Image

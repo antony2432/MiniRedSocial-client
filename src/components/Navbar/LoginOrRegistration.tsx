@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { BsList } from 'react-icons/bs';
-import { Inder } from 'next/font/google';
+import { inder } from '../resours';
 import SwitchDarkMode from './SwitchDarkMode';
 import Button from '../Button';
 import { useRouter, usePathname } from 'next/navigation';
-
-const inder = Inder({ weight: '400', subsets: ['latin'] });
 
 function Buttons() {
   const router = useRouter();
