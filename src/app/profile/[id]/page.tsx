@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import PostSend from './Components/PostSend';
+import Posts from './Components/Posts';
 
 export default function Profile() {
   return (
@@ -37,7 +38,7 @@ export default function Profile() {
 
 
      <PostSend/>
-     
+     <Posts/>
     </div>
   );
 }
