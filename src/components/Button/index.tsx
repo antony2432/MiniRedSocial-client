@@ -1,14 +1,14 @@
 import React from 'react';
 import { Props } from './props.entity';
 
-export default function Button({ children, variand, color }: Props) {
+export default function Button({ children, variand, color, onClick }: Props) {
   let styles;
   const styleContent = {
     teal: 'bg-teal-500 text-white hover:bg-teal-600',
     red: 'bg-red-500 text-white hover:bg-red-600',
   };
   const styleDefault = {
-    teal: 'text-black hover:bg-teal-100',
+    teal: 'text-black hover:bg-teal-100 dark:text-white dark:hover:text-black',
     red: 'text-black hover:bg-red-100',
   };
   const styleOutline = {
@@ -29,5 +29,9 @@ export default function Button({ children, variand, color }: Props) {
     default:
       break;
   }
-  return <button className={`px-4 py-3 ${styles}`}>{children}</button>;
+  return (
+    <button className={`px-4 py-3 ${styles}`} onClick={onClick}>
+      {children}
+    </button>
+  );
 }
