@@ -4,7 +4,7 @@ import Posts from './Components/Posts';
 
 export default function Profile() {
   return (
-    <div className='dark:bg-neutral-800 h-[100%] pb-52' >
+    <div className='dark:bg-[#18191a] h-[100%] pb-52 shadow-md ' >
       <div className='flex flex-col relative justify-center '>
         <Image
           src="/img/portada.jpg"
@@ -36,9 +36,12 @@ export default function Profile() {
       </div>
 
 
+<section className='max-w-screen xl:w-[72vw] xl:ml-[14vw]'>
 
-     <PostSend/>
+  <PostSend />
      <Posts/>
+</section>
+     
     </div>
   );
 }

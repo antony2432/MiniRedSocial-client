@@ -11,28 +11,28 @@ export default function Posts() {
 
       {ejemploApi.map((api) => (
 
-        <div key={api.id} className=' h-auto justify-center mx-auto my-10 p-2 relative box-border rounded-lg bg-white dark:bg-[#3E4342] dark:text-white dark:border-[1px] border-2 w-3/4 md:max-w-lg md:grid-cols-2 ' >
+        <div key={api.id} className=' h-auto justify-center mx-auto my-10 py-2 relative shadow-lg rounded-lg bg-white dark:bg-[#242526] dark:text-[#b1b4b7]  w-5/6 md:grid-cols-2  2xl:max-w-full' >
 
 
-          <div className="flex flex-row ml-[10%] ">
+          <div className="flex flex-row ml-[2.5%] ">
             <Image
-              src="/img/icon-perfil.jpg"
+              src="/img/perfil.jpg"
               width={40}
               height={40}
               alt="icono de perfil"
-              className='mr-3 mt-3 w-10 h-10'
+              className='mr-3 mt-3 w-10 h-10 2xl:w-24 2xl:h-24 rounded-full'
             />
-            <h2 className="float-left my-5">{api.name}</h2>
+            <h2 className="float-left my-5 2xl:text-5xl 2xl:m-10">{api.name}</h2>
           </div>
           <div className=" flex flex-col items-center text-xs">
-            <section className="flex justify-center items-center mb-5"><p className='w-4/5'>{api.post}</p></section>
+            <section className="flex justify-center items-center mb-5"><p className='w-[95%] 2xl:text-xl my-4'>{api.post}</p></section>
 
-            <div className='border-b-2 border-black dark:border-[#94A3B8] flex justify-between w-4/5 items-center pb-1'>
+            <div className='border-b-2 border-black dark:border-[#94A3B8] flex justify-between w-[95%] items-center pb-3 2xl:text-xl'>
               <h3>{api.meGusta} Me gusta</h3>
               <h3>Fecha de publicacion</h3>
             </div>
-            <div className='flex justify-between w-4/5 items-center'>
-              <section className='flex gap-1 mt-1'><BsFillHandThumbsUpFill className='text-teal-500  dark:text-white' /><h3>Me gusta </h3></section>
+            <div className='flex justify-between w-[95%] items-center 2xl:text-xl pt-3'>
+              <section className='flex gap-1 mt-1'><BsFillHandThumbsUpFill className='text-teal-500  dark:text-[#b1b4b7]  ' /><h3>Me gusta </h3></section>
               <h3>Comentar </h3>
             </div>
           </div>
