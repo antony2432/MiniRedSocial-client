@@ -4,14 +4,14 @@ import Posts from './Components/Posts';
 
 export default function Profile() {
   return (
-    <div>
-      <div className='flex flex-col relative justify-center'>
+    <div className='dark:bg-neutral-800 h-[100%] pb-52' >
+      <div className='flex flex-col relative justify-center '>
         <Image
           src="/img/portada.jpg"
           width={400}
           height={128}
           alt="Foto de portada"
-          className='w-screen relative xl:ml-[12.5%] xl:w-3/4 2xl:ml-[20%] 2xl:w-3/5'
+          className='w-screen relative xl:ml-[12.5%] xl:w-3/4 2xl:ml-[20%] 2xl:w-3/5 rounded-2xl'
         />
 
         <Image
@@ -27,7 +27,7 @@ export default function Profile() {
 
 
 
-      <div className=' w-screen h-8 bg-teal-800   pl-3 pr-3   text-white  items-center xl:w-[75vw] xl:ml-[12.5vw] 2xl:w-[60vw] 2xl:ml-[20vw]'>
+      <div className=' w-screen h-8 bg-teal-800 dark:bg-[#3E4342]  pl-3 pr-3   text-white  items-center xl:w-[75vw] xl:ml-[12.5vw] 2xl:w-[60vw] 2xl:ml-[20vw]'>
         <div className='max-w-md mx-auto  flex justify-between text-center items-center' >
           <h3>23 Posts</h3>
           <h3>123 Followers</h3>

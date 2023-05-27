@@ -7,35 +7,35 @@ export default function Posts() {
 
 
   return (
-    <div > 
-      
+    <div  >
+
       {ejemploApi.map((api) => (
 
-        <div key={api.id} className=' h-auto justify-center mx-auto my-10 p-2 relative box-border rounded-lg bg-white border-2 w-3/4 md:max-w-lg md:grid-cols-2 ' >
+        <div key={api.id} className=' h-auto justify-center mx-auto my-10 p-2 relative box-border rounded-lg bg-white dark:bg-[#3E4342] dark:text-white dark:border-[1px] border-2 w-3/4 md:max-w-lg md:grid-cols-2 ' >
 
 
-       <div className="flex flex-row ml-[10%] ">
-         <Image
-        src="/img/icon-perfil.jpg"
-        width={40}
-        height={40}
-        alt="icono de perfil"
-        className='mr-3 mt-3 w-10 h-10'
-      />
-       <h2 className="float-left my-5">{api.name}</h2>
-       </div>
-<div className=" flex flex-col items-center text-xs">
-        <section className="flex justify-center items-center mb-5"><p className='w-4/5'>{api.post}</p></section>
-          
-          <div className='border-b-2 border-black flex justify-between w-4/5 items-center pb-1'>
-            <h3>{api.meGusta} Me gusta</h3>
-            <h3>Fecha de publicacion</h3>
+          <div className="flex flex-row ml-[10%] ">
+            <Image
+              src="/img/icon-perfil.jpg"
+              width={40}
+              height={40}
+              alt="icono de perfil"
+              className='mr-3 mt-3 w-10 h-10'
+            />
+            <h2 className="float-left my-5">{api.name}</h2>
           </div>
-<div className='flex justify-between w-4/5 items-center'>
-  <section className='flex gap-1 mt-1'><BsFillHandThumbsUpFill className='text-teal-500 '/><h3>Me gusta </h3></section>
-  <h3>Comentar </h3>
-</div>
-</div>
+          <div className=" flex flex-col items-center text-xs">
+            <section className="flex justify-center items-center mb-5"><p className='w-4/5'>{api.post}</p></section>
+
+            <div className='border-b-2 border-black dark:border-[#94A3B8] flex justify-between w-4/5 items-center pb-1'>
+              <h3>{api.meGusta} Me gusta</h3>
+              <h3>Fecha de publicacion</h3>
+            </div>
+            <div className='flex justify-between w-4/5 items-center'>
+              <section className='flex gap-1 mt-1'><BsFillHandThumbsUpFill className='text-teal-500  dark:text-white' /><h3>Me gusta </h3></section>
+              <h3>Comentar </h3>
+            </div>
+          </div>
         </div>
 
 
