@@ -2,9 +2,9 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import { useAppSelector } from '@/redux/hooks';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import { inter } from '@/components/resours';
+import Footer from '@/components/Footer';
+import { usePathname } from 'next/navigation';
 
 export default function RealLayout({
   children,
@@ -12,6 +12,7 @@ export default function RealLayout({
   children: React.ReactNode;
 }) {
   const darks = useAppSelector((state) => state.sistem.darkMode);
+  const pathname = usePathname();
   return (
     <html lang="en" className={`${darks ? 'dark' : null}`}>
       <body
@@ -19,6 +20,9 @@ export default function RealLayout({
       >
         <Navbar />
         {children}
+        {pathname === '/login' || pathname === '/registration' ? null : (
+          <Footer />
+        )}
       </body>
     </html>
   );
