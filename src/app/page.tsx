@@ -1,7 +1,9 @@
+import SectionImg from '@/components/sectionImg';
+
 export default function page() {
   return (
     <div>
-      <h1>Landing ...</h1>
+    <SectionImg />
     </div>
   );
 }
