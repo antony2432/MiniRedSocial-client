@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { RootState } from '../store';
 
 interface SistemState {
   darkMode: boolean;
@@ -18,5 +19,6 @@ export const sistemSlice = createSlice({
   },
 });
 
+export const darkModeActive = (state: RootState ) => state.sistem.darkMode;
 export const { setDarkMode } = sistemSlice.actions;
 export default sistemSlice.reducer;

@@ -58,9 +58,9 @@ export default function Footer() {
   const pathname = usePathname();
   return (
     <footer
-      className={`bg-teal-600 text-white px-5 py-4 flex flex-col ${
+      className={`order-last bg-teal-600 text-white px-5 py-4 flex flex-col ${
         pathname === '/' ? 'gap-5 xl:gap-0' : null
-      }  dark:bg-teal-800 xl:items-center absolute bottom-0 w-full`}
+      }  dark:bg-teal-800 xl:items-center w-full`}
     >
       <section className="flex justify-between xl:w-full">
         <section className="flex gap-2 items-center">
